@@ -28,6 +28,8 @@
     --version "{{ cm_chart_version }}"
     {% endif %}
     -f "{{ temp_helmvals.path }}"
+    --set cloudlaunch.cloudlaunchserver.image.repository="almahmoud/cloudman-server"
+    --set cloudlaunch.cloudlaunchserver.image.tag="router"
   ignore_errors: true
   async: 30
   poll: 0
